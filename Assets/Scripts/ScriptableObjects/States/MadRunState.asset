@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca73c326f19879442a3051a09404bf1b, type: 3}
+  m_Name: MadRunState
+  m_EditorClassIdentifier: 
+  setupActions:
+  - {fileID: 11400000, guid: 7fc086bee43563e4087cc7a663c62b8e, type: 2}
+  actions:
+  - {fileID: 11400000, guid: 5f3df1752ea6c18428d0a0a13a48c836, type: 2}
+  eventTriggeredActions:
+  - action: {fileID: 11400000, guid: b802310c4e8fa9943bf0cf11322b97f4, type: 2}
+    type: 3
+  - action: {fileID: 11400000, guid: c20c0b39a9e7c6649a4dc79784e346ba, type: 2}
+    type: 1
+  - action: {fileID: 11400000, guid: 164baa1d416111a4999d128d7b917527, type: 2}
+    type: 4
+  exitActions: []
+  transitions: []
+  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

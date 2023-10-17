@@ -8,6 +8,8 @@ TagManager:
   - BotLimit
   - LeftLimit
   - RightLimit
+  - LeftClimbCollider
+  - RightClimbCollider
   layers:
   - Default
   - TransparentFX
@@ -45,8 +47,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Particle_Behind
+    uniqueID: 1589093553
+    locked: 0
   - name: Map
     uniqueID: 121160057
+    locked: 0
+  - name: Particle_Front
+    uniqueID: 1421260427
     locked: 0
   - name: Madeline
     uniqueID: 3060742645

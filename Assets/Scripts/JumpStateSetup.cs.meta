@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 253fadbe25958b84e897ee40795e60e4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MadJumpState: {fileID: 11400000, guid: fefb80379636f3248a623b5610663f90, type: 2}
+  - OnGround: {fileID: 11400000, guid: 7c826dce8730cbf449bda96a75476994, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

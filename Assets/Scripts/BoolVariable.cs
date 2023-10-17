@@ -1,10 +1,10 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
 [CreateAssetMenu(fileName = "BoolVariable", menuName = "ScriptableObjects/BoolVariable", order = 2)]
 public class BoolVariable : Variable<bool>
 {
-
     public override void SetValue(bool value)
     {
         _value = value;

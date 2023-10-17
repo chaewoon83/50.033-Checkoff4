@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class DetectMadelineOnground : MonoBehaviour
 {
-    PlayerMovement Movement;
+    public BoolVariable OnGround;
     // Start is called before the first frame update
     void Start()
     {
-        Movement = transform.parent.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -22,7 +21,7 @@ public class DetectMadelineOnground : MonoBehaviour
         if(collision.transform.gameObject.layer == 6)
         {
             Debug.Log("OnGround");
-            Movement.OnGroundState = true;
+            OnGround.SetValue(true);
         }
     }
 }

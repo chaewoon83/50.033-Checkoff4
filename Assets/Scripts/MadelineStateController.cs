@@ -20,6 +20,11 @@ public enum DashState
 
 }
 
+/// <summary>
+/// TODO Reset Variables
+/// </summary>
+/// 
+
 public class MadelineStateController : StateController
 {
     public MadelineState shouldBeNextState = MadelineState.Default;
@@ -44,6 +49,24 @@ public class MadelineStateController : StateController
     public void SetDash(DashState i)
     {
         currentDashState = i;
+    }
+
+    public void Move()
+    {
+        this.currentState.DoEventTriggeredActions(this, ActionType.Move);
+    }
+    public void Jump()
+    {
+        this.currentState.DoEventTriggeredActions(this, ActionType.Jump);
+    }
+    public void Stop()
+    {
+        this.currentState.DoEventTriggeredActions(this, ActionType.Stop);
+    }
+
+    public void Climb()
+    {
+        this.currentState.DoEventTriggeredActions(this, ActionType.Climb);
     }
 
 }
