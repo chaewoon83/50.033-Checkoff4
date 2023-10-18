@@ -10,12 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca73c326f19879442a3051a09404bf1b, type: 3}
-  m_Name: MadClimbIdle
+  m_Name: MadClimbMoveState
   m_EditorClassIdentifier: 
   setupActions:
   - {fileID: 11400000, guid: 8f591ca1d8da4c04da0874dbf717ed40, type: 2}
-  actions: []
-  eventTriggeredActions: []
+  actions:
+  - {fileID: 11400000, guid: d187899662b09b04791097707e99d27c, type: 2}
+  eventTriggeredActions:
+  - action: {fileID: 11400000, guid: 164baa1d416111a4999d128d7b917527, type: 2}
+    type: 4
+  - action: {fileID: 11400000, guid: b802310c4e8fa9943bf0cf11322b97f4, type: 2}
+    type: 6
   exitActions: []
   transitions: []
   sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

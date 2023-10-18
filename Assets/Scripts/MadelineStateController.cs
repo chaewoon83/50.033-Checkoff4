@@ -64,9 +64,17 @@ public class MadelineStateController : StateController
         this.currentState.DoEventTriggeredActions(this, ActionType.Stop);
     }
 
-    public void Climb()
+    public void ClimbStart()
     {
         this.currentState.DoEventTriggeredActions(this, ActionType.Climb);
+    }
+    public void ClimbMove()
+    {
+        this.currentState.DoEventTriggeredActions(this, ActionType.ClimbMove);
+    }
+    public void ClimbEnd()
+    {
+        this.currentState.DoEventTriggeredActions(this, ActionType.ClimbEnd);
     }
 
 }

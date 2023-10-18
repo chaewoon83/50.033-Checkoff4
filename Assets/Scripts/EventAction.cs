@@ -5,6 +5,8 @@ public enum ActionType
     Dash = 2,
     Stop = 3,
     Climb = 4,
+    ClimbMove = 5,
+    ClimbEnd = 6,
     Default = -1
 }
 

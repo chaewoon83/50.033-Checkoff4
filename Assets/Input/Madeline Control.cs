@@ -62,6 +62,15 @@ public partial class @MadelineControl: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ClimbVertical"",
+                    ""type"": ""Button"",
+                    ""id"": ""cc486433-9828-41ad-92e4-e6310059cdd9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -130,6 +139,39 @@ public partial class @MadelineControl: IInputActionCollection2, IDisposable
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""0ccbf7d0-1608-4ccb-b001-38f2a11f2288"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ClimbVertical"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""970d9e16-c6a1-4c2d-89b2-1554c32cbebe"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ClimbVertical"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""678d81b5-ceff-40a6-81b1-1d6c9de44959"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ClimbVertical"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -164,6 +206,7 @@ public partial class @MadelineControl: IInputActionCollection2, IDisposable
         m_gameplay_Jump = m_gameplay.FindAction("Jump", throwIfNotFound: true);
         m_gameplay_Climb = m_gameplay.FindAction("Climb", throwIfNotFound: true);
         m_gameplay_Dash = m_gameplay.FindAction("Dash", throwIfNotFound: true);
+        m_gameplay_ClimbVertical = m_gameplay.FindAction("ClimbVertical", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -229,6 +272,7 @@ public partial class @MadelineControl: IInputActionCollection2, IDisposable
     private readonly InputAction m_gameplay_Jump;
     private readonly InputAction m_gameplay_Climb;
     private readonly InputAction m_gameplay_Dash;
+    private readonly InputAction m_gameplay_ClimbVertical;
     public struct GameplayActions
     {
         private @MadelineControl m_Wrapper;
@@ -237,6 +281,7 @@ public partial class @MadelineControl: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_gameplay_Jump;
         public InputAction @Climb => m_Wrapper.m_gameplay_Climb;
         public InputAction @Dash => m_Wrapper.m_gameplay_Dash;
+        public InputAction @ClimbVertical => m_Wrapper.m_gameplay_ClimbVertical;
         public InputActionMap Get() { return m_Wrapper.m_gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -258,6 +303,9 @@ public partial class @MadelineControl: IInputActionCollection2, IDisposable
             @Dash.started += instance.OnDash;
             @Dash.performed += instance.OnDash;
             @Dash.canceled += instance.OnDash;
+            @ClimbVertical.started += instance.OnClimbVertical;
+            @ClimbVertical.performed += instance.OnClimbVertical;
+            @ClimbVertical.canceled += instance.OnClimbVertical;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -274,6 +322,9 @@ public partial class @MadelineControl: IInputActionCollection2, IDisposable
             @Dash.started -= instance.OnDash;
             @Dash.performed -= instance.OnDash;
             @Dash.canceled -= instance.OnDash;
+            @ClimbVertical.started -= instance.OnClimbVertical;
+            @ClimbVertical.performed -= instance.OnClimbVertical;
+            @ClimbVertical.canceled -= instance.OnClimbVertical;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -306,5 +357,6 @@ public partial class @MadelineControl: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnClimb(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnClimbVertical(InputAction.CallbackContext context);
     }
 }

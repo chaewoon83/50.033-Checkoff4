@@ -9,13 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6b2fc9892b2e7844be6d28fb3bd6c40, type: 3}
-  m_Name: GameConstants
+  m_Script: {fileID: 11500000, guid: 43b1bd8b85c5d4b408c65c3b7bdcf90c, type: 3}
+  m_Name: SetupClimbIdle
   m_EditorClassIdentifier: 
-  speed: 10
-  maxSpeed: 5
-  upSpeed: 15
-  jumpHorSpeed: 4
-  ClimbSpeed: 4
-  ClimbMaxSpeed: 2
-  madelineStartingPosition: {x: 0, y: 0, z: 0}
+  animatorController: {fileID: 9100000, guid: 73c0f0fa31981a24cba1641de43775a4, type: 2}

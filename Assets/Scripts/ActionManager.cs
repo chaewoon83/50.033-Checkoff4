@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -11,8 +12,12 @@ public class ActionManager : MonoBehaviour
     public UnityEvent moveCheck;
     public UnityEvent StopCheck;
     public UnityEvent ClimbCheck;
+    public UnityEvent ClimbMoveCheck;
+    public UnityEvent ClimbMoveEnd;
+    public UnityEvent ClimbEnd;
 
     public FloatVariable HorMoveValue;
+    public FloatVariable VerMoveValue;
     public BoolVariable IsMoving;
     public BoolVariable IsClimbKeyOn;
     public BoolVariable IsLeftClimb;
@@ -46,6 +51,7 @@ public class ActionManager : MonoBehaviour
         if (context.canceled)
         {
             Debug.Log("move stopped");
+            HorMoveValue.SetValue(0);
             StopCheck.Invoke();
             IsMoving.SetValue(false);
             Debug.Log(IsMoving.Value);
@@ -74,6 +80,7 @@ public class ActionManager : MonoBehaviour
 
         else if (context.performed)
         {
+            VerMoveValue.SetValue(context.ReadValue<float>());
             if (IsLeftClimb.Value == true || IsRightClimb.Value == true)
             {
                 ClimbCheck.Invoke();
@@ -83,7 +90,32 @@ public class ActionManager : MonoBehaviour
         else if (context.canceled)
         {
             IsClimbKeyOn.SetValue(false);
+            ClimbEnd.Invoke();
             Debug.Log("climb cancelled");
+        }
+
+    }
+
+    public void OnClimbMoveAction(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Debug.Log("climb move started");
+        }
+
+        else if (context.performed)
+        {
+            if (IsLeftClimb.Value == true || IsRightClimb.Value == true)
+            {
+                ClimbMoveCheck.Invoke();
+            }
+            Debug.Log("climb move performed");
+        }
+        else if (context.canceled)
+        {
+            IsClimbKeyOn.SetValue(false);
+            ClimbMoveEnd.Invoke();
+            Debug.Log("climb move cancelled");
         }
 
     }
