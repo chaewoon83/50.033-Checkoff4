@@ -436,6 +436,7 @@ GameObject:
   - component: {fileID: 163538711}
   - component: {fileID: 163538712}
   - component: {fileID: 163538713}
+  - component: {fileID: 163538714}
   m_Layer: 3
   m_Name: Madeline
   m_TagString: Player
@@ -701,6 +702,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &163538714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163538703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748fe17d816390f449f880d4c75868c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameRestart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 79dffea7b89541d458b3b37d9aa8b97d, type: 2}
+        m_TargetAssemblyTypeName: GameEvent`1[[UnityEngine.Object, UnityEngine
+        m_MethodName: Raise
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  DeadSound: {fileID: 8300000, guid: b607b2c6d98790449abcaddbe85d548f, type: 3}
 --- !u!1 &212181340
 GameObject:
   m_ObjectHideFlags: 0
