@@ -19,3 +19,4 @@ MonoBehaviour:
   IsMoving: {fileID: 11400000, guid: 853736642ec346446887c0bdf242ecd9, type: 2}
   faceRightState: {fileID: 11400000, guid: 7c826dce8730cbf449bda96a75476994, type: 2}
   Constants: {fileID: 11400000, guid: add166af167a87e4c99b25818d35375f, type: 2}
+  LandSound: {fileID: 8300000, guid: 0d3d9ba3e74ca0a4cb19b10ab9d6c48c, type: 3}

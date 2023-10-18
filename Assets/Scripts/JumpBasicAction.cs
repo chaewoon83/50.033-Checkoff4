@@ -14,10 +14,12 @@ public class JumpBasicAction : Action
     public BoolVariable IsMoving;
     public BoolVariable faceRightState;
     public GameConstants Constants;
+    public AudioClip LandSound;
     public override void Act(StateController controller)
     {
         if(OnGround.Value == true)
         {
+            controller.GetComponent<AudioSource>().PlayOneShot(LandSound);
             if (IsMoving.Value == true)
             {
                 controller.TransitionToState(MoveState);
@@ -46,7 +48,7 @@ public class JumpBasicAction : Action
     {
         Rigidbody2D RigidBody = controller.GetComponent<Rigidbody2D>();
         Vector2 movement = new Vector2(value, 0);
-        RigidBody.AddForce(movement * Constants.jumpHorSpeed, ForceMode2D.Force);
+        RigidBody.AddForce(movement * Constants.jumpHorSpeed , ForceMode2D.Force);
         Debug.Log("Speedddd");
         Debug.Log("123123123");
         // check if it doesn't go beyond maxSpeed

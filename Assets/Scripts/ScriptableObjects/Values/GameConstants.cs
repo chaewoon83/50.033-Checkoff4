@@ -11,5 +11,7 @@ public class GameConstants : ScriptableObject
     public int ClimbSpeed;
     public int ClimbMaxSpeed;
     public float Gravity;
+    public float DashSpeed;
+    public float DashMaxSpeed;
     public Vector3 madelineStartingPosition;
 }

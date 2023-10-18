@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: JumpStateSetup
   m_EditorClassIdentifier: 
   GameConstant: {fileID: 11400000, guid: add166af167a87e4c99b25818d35375f, type: 2}
+  IsDash: {fileID: 11400000, guid: 5948cd70fe14c334ba84ba8b6eff94f1, type: 2}
+  JumpSound: {fileID: 8300000, guid: c597addc5b32c8341889ba801b1e34c4, type: 3}

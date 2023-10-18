@@ -30,4 +30,17 @@ public class DetectMadelineClimbing : MonoBehaviour
             IsRightClimbe.SetValue(true);
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.gameObject.CompareTag("LeftClimbCollider") == true)
+        {
+            Debug.Log("LeaveLeftClimb");
+            IsLeftClimbe.SetValue(false);
+        }
+        if (collision.transform.gameObject.CompareTag("RightClimbCollider") == true)
+        {
+            Debug.Log("LeaveRightClimb");
+            IsRightClimbe.SetValue(false);
+        }
+    }
 }

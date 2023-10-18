@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54dafcfdb16966447b451730d82a005f, type: 3}
+  m_Name: DashStateSetup
+  m_EditorClassIdentifier: 
+  IsDash: {fileID: 11400000, guid: 5948cd70fe14c334ba84ba8b6eff94f1, type: 2}
+  InputVerValue: {fileID: 11400000, guid: a9f4ab586a2334348941beffa70e43dd, type: 2}
+  InputHorValue: {fileID: 11400000, guid: ade4ed40309d67643b5ab99c5d76eede, type: 2}
+  DashVerValue: {fileID: 11400000, guid: 5cbb1d150ef5f774c9103c277ab3218b, type: 2}
+  DashHorValue: {fileID: 11400000, guid: db8775b3bded2a0449ef1e208109e120, type: 2}
+  DashSound: {fileID: 8300000, guid: 863b16bbe117e054ca2e8a31ed6c8c32, type: 3}

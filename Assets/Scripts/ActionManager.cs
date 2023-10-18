@@ -61,10 +61,13 @@ public class ActionManager : MonoBehaviour
     public void OnDashAction(InputAction.CallbackContext context)
     {
         if (context.started)
-            Debug.Log("dash started");
-        else if (context.performed)
         {
             Dash.Invoke();
+            Debug.Log("dash started");
+        }
+        else if (context.performed)
+        {
+
             Debug.Log("dash performed");
         }
         else if (context.canceled)
@@ -80,11 +83,9 @@ public class ActionManager : MonoBehaviour
 
         else if (context.performed)
         {
+            IsClimbKeyOn.SetValue(true);
 
-            if (IsLeftClimb.Value == true || IsRightClimb.Value == true)
-            {
-                ClimbCheck.Invoke();
-            }
+
             Debug.Log("climb performed");
         }
         else if (context.canceled)
@@ -105,9 +106,9 @@ public class ActionManager : MonoBehaviour
 
         else if (context.performed)
         {
+            VerMoveValue.SetValue(context.ReadValue<float>());
             if (IsLeftClimb.Value == true || IsRightClimb.Value == true)
             {
-                VerMoveValue.SetValue(context.ReadValue<float>());
                 ClimbMoveCheck.Invoke();
             }
             Debug.Log("climb move performed");
@@ -118,6 +119,5 @@ public class ActionManager : MonoBehaviour
             ClimbMoveEnd.Invoke();
             Debug.Log("climb move cancelled");
         }
-
     }
 }

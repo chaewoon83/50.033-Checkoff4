@@ -17,6 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 04652d0ea731c6f49ab6b2e41c93d6ea, type: 2}
   actions:
   - {fileID: 11400000, guid: a10e1a12017528542aaa0ff01b0bb1c2, type: 2}
+  - {fileID: 11400000, guid: 00fe3734cd77fe843b960a5524587d31, type: 2}
   eventTriggeredActions:
   - action: {fileID: 11400000, guid: 265c1c16dc0dfe14bac48796681410a6, type: 2}
     type: 0
@@ -24,6 +25,8 @@ MonoBehaviour:
     type: 1
   - action: {fileID: 11400000, guid: 164baa1d416111a4999d128d7b917527, type: 2}
     type: 4
+  - action: {fileID: 11400000, guid: 86e6802fb989cb744bf2953f3a0b340f, type: 2}
+    type: 2
   exitActions: []
   transitions: []
   sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

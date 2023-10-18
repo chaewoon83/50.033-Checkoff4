@@ -7,6 +7,7 @@ public enum ActionType
     Climb = 4,
     ClimbMove = 5,
     ClimbEnd = 6,
+    NoDash = 7,
     Default = -1
 }
 

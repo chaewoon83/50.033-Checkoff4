@@ -39,19 +39,19 @@ public class CameraController : MonoBehaviour
     Vector3 CalCamPos()
     {
         Vector3 NewCamPos = new Vector3 (Player.transform.position.x, Player.transform.position.y, -10.0f);
-        if (Left_Limit > transform.position.x - viewportHalfWidth)
-        {
-            NewCamPos.x = Left_Limit + viewportHalfWidth;
-        }
+        //if (Left_Limit > transform.position.x - viewportHalfWidth)
+        //{
+        //    NewCamPos.x = Left_Limit + viewportHalfWidth;
+        //}
             
-        if (Right_Limit < transform.position.x + viewportHalfWidth)
-        {
-            NewCamPos.x = Right_Limit - viewportHalfWidth;
-        }
-        if (Bot_Limit > transform.position.y - viewportHalfHeight)
-        {
-            NewCamPos.y = Bot_Limit + viewportHalfHeight;
-        }
+        //if (Right_Limit < transform.position.x + viewportHalfWidth)
+        //{
+        //    NewCamPos.x = Right_Limit - viewportHalfWidth;
+        //}
+        //if (Bot_Limit > transform.position.y - viewportHalfHeight)
+        //{
+        //    NewCamPos.y = Bot_Limit + viewportHalfHeight;
+        //}
 
         Vector3 CalCamPOSI =  Vector3.Lerp(this.transform.position, NewCamPos, 0.02f);
         CamMoveVec = NewCamPos - new Vector3(this.transform.position.x, this.transform.position.y, -10.0f);

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbef57483b0c5d04281fe819cca9922e, type: 3}
+  m_Name: NotHaveDashBasicAction
+  m_EditorClassIdentifier: 
+  OnGround: {fileID: 11400000, guid: ee1ad25e5e796d54596a9a166c1ccad0, type: 2}
+  IsDash: {fileID: 11400000, guid: 5948cd70fe14c334ba84ba8b6eff94f1, type: 2}
+  HaveDashState: {fileID: 11400000, guid: 0ba249e1a97fe024ebd4092b1b0cd8fd, type: 2}

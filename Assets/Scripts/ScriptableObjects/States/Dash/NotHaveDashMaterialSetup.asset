@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb2b1ca68295e442b954ad581dff715, type: 3}
+  m_Name: NotHaveDashMaterialSetup
+  m_EditorClassIdentifier: 
+  newMat: {fileID: 2100000, guid: a1866e366609eb248a8071b28461d8b3, type: 2}
+  Constants: {fileID: 11400000, guid: add166af167a87e4c99b25818d35375f, type: 2}

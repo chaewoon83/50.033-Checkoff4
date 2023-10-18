@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: GravitySettingAction
   m_EditorClassIdentifier: 
   Constant: {fileID: 11400000, guid: add166af167a87e4c99b25818d35375f, type: 2}
+  IsClimbKeyOn: {fileID: 11400000, guid: d71f1f6d7d573c543a2859173939e373, type: 2}

@@ -5,7 +5,7 @@ public class ClearDashAction : Action
 {
     public override void Act(StateController controller)
     {
-        MadelineStateController m = (MadelineStateController)controller;
+        DashStateController m = (DashStateController)controller;
         m.currentDashState = DashState.Default;
     }
 }

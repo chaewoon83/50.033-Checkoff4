@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca73c326f19879442a3051a09404bf1b, type: 3}
+  m_Name: NoDashState
+  m_EditorClassIdentifier: 
+  setupActions:
+  - {fileID: 11400000, guid: 9e0d11d23a1645e4e83bc7fe1d12e6c4, type: 2}
+  actions:
+  - {fileID: 11400000, guid: 0a2aaa4670564fa40b07f7e4c8c6753d, type: 2}
+  eventTriggeredActions: []
+  exitActions: []
+  transitions: []
+  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

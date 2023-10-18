@@ -12,24 +12,14 @@ public enum MadelineState
 
 }
 
-public enum DashState
-{
-    Default = -1,
-    DashOnce = 0,
-    DashTwice = 1,
-
-}
-
-/// <summary>
-/// TODO Reset Variables
-/// </summary>
-/// 
 
 public class MadelineStateController : StateController
 {
     public MadelineState shouldBeNextState = MadelineState.Default;
-    public DashState currentDashState = DashState.Default;
-
+    public BoolVariable IsClimbKeyOn;
+    public BoolVariable IsLeftClimbOn;
+    public BoolVariable IsRightClimbOn;
+    public StateController HaveDash;
 
     public override void Start()
     {
@@ -40,17 +30,11 @@ public class MadelineStateController : StateController
     // this should be added to the GameRestart EventListener as callback
     public void GameRestart()
     {
-        // clear powerup
-        currentDashState = DashState.Default;
         // set the start state
         TransitionToState(startState);
-    }
+        transform.position = Vector3.zero;
 
-    public void SetDash(DashState i)
-    {
-        currentDashState = i;
     }
-
     public void Move()
     {
         this.currentState.DoEventTriggeredActions(this, ActionType.Move);
@@ -62,6 +46,15 @@ public class MadelineStateController : StateController
     public void Stop()
     {
         this.currentState.DoEventTriggeredActions(this, ActionType.Stop);
+    }
+
+    public void Dash()
+    {
+        if (HaveDash.currentState.name == "HaveDashState") 
+        {
+            this.currentState.DoEventTriggeredActions(this, ActionType.Dash);
+        }
+
     }
 
     public void ClimbStart()

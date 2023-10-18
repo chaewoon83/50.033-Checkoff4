@@ -13,7 +13,6 @@ public class MadMoveAction : Action
     override public void Act(StateController controller)
     {
         int faceRight = HorMoveValue.Value > 0 ? 1 : -1;
-
         MoveHorizontalCheck(faceRight, controller);
     }
     public void MoveHorizontalCheck(int value, StateController controller)
@@ -26,13 +25,18 @@ public class MadMoveAction : Action
     {
         Rigidbody2D RigidBody = controller.GetComponent<Rigidbody2D>();
         Vector2 movement = new Vector2(value, 0);
-        RigidBody.AddForce(movement * Constants.speed, ForceMode2D.Force);
+        RigidBody.AddForce(movement * Constants.speed , ForceMode2D.Force);
         //Debug.Log("Speedddd");
         //Debug.Log("123123123");
         // check if it doesn't go beyond maxSpeed
         if (MathF.Abs(RigidBody.velocity.x) > Constants.maxSpeed)
         {
             RigidBody.velocity = new Vector2(Constants.maxSpeed * value, RigidBody.velocity.y);
+        }
+
+        if (RigidBody.velocity.x > 15.0f)
+        {
+            int a = 0;
         }
 
     }

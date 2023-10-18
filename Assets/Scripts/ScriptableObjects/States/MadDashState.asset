@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca73c326f19879442a3051a09404bf1b, type: 3}
+  m_Name: MadDashState
+  m_EditorClassIdentifier: 
+  setupActions:
+  - {fileID: 11400000, guid: dd7673b4df690bb4199ba317e7604b96, type: 2}
+  - {fileID: 11400000, guid: 98fdf6a7f0f23ef4298706aab08c51d3, type: 2}
+  - {fileID: 11400000, guid: a0d88e03ee09bc04e81ee1e278f4c9b2, type: 2}
+  actions:
+  - {fileID: 11400000, guid: 9f1a718d403c89c4fb8a1b1a368a67da, type: 2}
+  eventTriggeredActions:
+  - action: {fileID: 11400000, guid: 401015a9d663bf546835ce6dac1b8de3, type: 2}
+    type: 1
+  exitActions:
+  - {fileID: 11400000, guid: 983ffd9282355ed4bb3363d7b9159102, type: 2}
+  - {fileID: 11400000, guid: 1e027cd4b79a1614f8ff9e7dd8b5ce89, type: 2}
+  transitions: []
+  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
