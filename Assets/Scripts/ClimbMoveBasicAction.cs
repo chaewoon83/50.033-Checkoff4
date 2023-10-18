@@ -7,7 +7,6 @@ using UnityEngine;
 public class ClimbMoveBasicAction : Action
 {
     public FloatVariable VerMoveValue;
-    public BoolVariable IsMoving;
     public GameConstants Constants;
     override public void Act(StateController controller)
     {

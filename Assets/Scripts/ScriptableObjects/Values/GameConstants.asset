@@ -18,4 +18,5 @@ MonoBehaviour:
   jumpHorSpeed: 4
   ClimbSpeed: 4
   ClimbMaxSpeed: 2
+  Gravity: 4
   madelineStartingPosition: {x: 0, y: 0, z: 0}

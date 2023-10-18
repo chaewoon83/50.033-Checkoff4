@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cefc5fccbd5fa04382635fa673b0548, type: 3}
-  m_Name: IdleStateSetup
+  m_Script: {fileID: 11500000, guid: fc956c2df3419944a957da2feb404aa1, type: 3}
+  m_Name: ClimbIdleBasicAction
   m_EditorClassIdentifier: 
-  IsMoving: {fileID: 11400000, guid: 853736642ec346446887c0bdf242ecd9, type: 2}

@@ -80,7 +80,7 @@ public class ActionManager : MonoBehaviour
 
         else if (context.performed)
         {
-            VerMoveValue.SetValue(context.ReadValue<float>());
+
             if (IsLeftClimb.Value == true || IsRightClimb.Value == true)
             {
                 ClimbCheck.Invoke();
@@ -107,13 +107,14 @@ public class ActionManager : MonoBehaviour
         {
             if (IsLeftClimb.Value == true || IsRightClimb.Value == true)
             {
+                VerMoveValue.SetValue(context.ReadValue<float>());
                 ClimbMoveCheck.Invoke();
             }
             Debug.Log("climb move performed");
         }
         else if (context.canceled)
         {
-            IsClimbKeyOn.SetValue(false);
+            VerMoveValue.SetValue(0);
             ClimbMoveEnd.Invoke();
             Debug.Log("climb move cancelled");
         }

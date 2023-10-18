@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1d17edb9021f94ca00e4306111e28a, type: 3}
-  m_Name: ClimbMoveBasicAction
+  m_Script: {fileID: 11500000, guid: dbf11601d1ae20f4a8f291c2e0646167, type: 3}
+  m_Name: GravitySettingAction
   m_EditorClassIdentifier: 
-  VerMoveValue: {fileID: 11400000, guid: a9f4ab586a2334348941beffa70e43dd, type: 2}
-  Constants: {fileID: 11400000, guid: add166af167a87e4c99b25818d35375f, type: 2}
+  Constant: {fileID: 11400000, guid: add166af167a87e4c99b25818d35375f, type: 2}
