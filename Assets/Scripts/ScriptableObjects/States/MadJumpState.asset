@@ -15,6 +15,7 @@ MonoBehaviour:
   setupActions:
   - {fileID: 11400000, guid: cb3c717f2ca153940b6a104fafda84ef, type: 2}
   - {fileID: 11400000, guid: f6f739c5c99793743852c6859a086c28, type: 2}
+  - {fileID: 11400000, guid: 48615c8cdaff0484091a879cb7945435, type: 2}
   actions:
   - {fileID: 11400000, guid: eb0b047491499e7418284322fb98a53d, type: 2}
   - {fileID: 11400000, guid: 00fe3734cd77fe843b960a5524587d31, type: 2}

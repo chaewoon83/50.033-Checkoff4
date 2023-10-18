@@ -50,6 +50,9 @@ TagManager:
   - name: Particle_Behind
     uniqueID: 1589093553
     locked: 0
+  - name: Background_Behind
+    uniqueID: 2759268927
+    locked: 0
   - name: Map
     uniqueID: 121160057
     locked: 0
@@ -58,4 +61,7 @@ TagManager:
     locked: 0
   - name: Madeline
     uniqueID: 3060742645
+    locked: 0
+  - name: Background_Front
+    uniqueID: 3456384999
     locked: 0
