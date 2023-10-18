@@ -33,7 +33,6 @@ public class MadelineStateController : StateController
         // set the start state
         TransitionToState(startState);
         transform.position = Vector3.zero;
-
     }
     public void Move()
     {
@@ -54,9 +53,7 @@ public class MadelineStateController : StateController
         {
             this.currentState.DoEventTriggeredActions(this, ActionType.Dash);
         }
-
     }
-
     public void ClimbStart()
     {
         this.currentState.DoEventTriggeredActions(this, ActionType.Climb);

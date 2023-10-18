@@ -116,7 +116,10 @@ public class ActionManager : MonoBehaviour
         else if (context.canceled)
         {
             VerMoveValue.SetValue(0);
-            ClimbMoveEnd.Invoke();
+            if(IsClimbKeyOn.Value == true)
+            {
+                ClimbMoveEnd.Invoke();
+            }
             Debug.Log("climb move cancelled");
         }
     }
